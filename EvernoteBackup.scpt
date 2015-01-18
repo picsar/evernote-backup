@@ -2,7 +2,8 @@
 -- the notes can be backed up to an external drive or to the cloud
 
 -- Change the path below to the location you want the notes to be exported
-set f to "/Volumes/My Book/Data/Backup/Export.enex"
+set timestamp to do shell script "date +%Y%m%d%H%M%S"
+set f to "/Volumes/My Book/Data/Backup/EvernoteBackup-" & timestamp & ".enex"
 
 with timeout of (30 * 60) seconds
 	tell application "Evernote"
